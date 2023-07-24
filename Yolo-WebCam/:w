@@ -1,0 +1,18 @@
+from ultralytics import YOLO
+import cv2
+
+# Webcam
+cap = cv2.VideoCapture(0)
+# Set Width
+cap.set(3,1280)
+# Set Height
+cap.set(4,720)
+
+
+
+while True:
+    success, img = cap.read()
+    cv2.imshow("Image", img)
+
+    if cv2.waitKey(0) & 0xFF == ord('q'):
+        break
