@@ -42,11 +42,15 @@ limitsNorth = [700, 200, 1100, 200]
 totalCountSouth = []
 totalCountNorth = []
 
+
+VideoResult = cv2.VideoWriter('./Video/VideoResult.avi', cv2.VideoWriter_fourcc(*'MJPG'), 10, (1280, 720))
+
+
 while True:
     success, img = cap.read()
 
     # Overlay Mask with bitwise and
-    imgRegion = cv2.bitwise_and(img, mask)
+    imgRegion = cv2.bitwise_and(img, mask, mask = None)
 
     results = model(imgRegion, stream=True)
 
@@ -130,5 +134,12 @@ while True:
     cv2.imshow("Image", img)
     # cv2.imshow("ImageRegion", imgRegion)
 
+    VideoResult.write(img)
+
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
+
+
+VideoResult.release()
+cv2.destroyAllWindows()
+print("The video was successfully saved")
