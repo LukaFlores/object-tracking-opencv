@@ -120,13 +120,12 @@ Inspired by [youtube project](https://www.youtube.com/watch?v=WgPbbWmnXJ8&t=75s)
 
 3. I used an `Apple M1 Pro Laptop` for training using these [settings](https://github.com/LukaFlores/object-tracking-opencv/blob/2e872723a19a7ae71c05505a22aae430abf5951c/Yolo-Poker/train.py#L21-L28)
 
-    - Epochs
-        Epochs are the number of times that it is trained
+    - Epochs signify the number of times the model has been through the training data
 
-    - Batch
+    - Batch signifies the number of images used for one iteration, the image below is an example of what the model sees
+    ![batch image]()
 
-    - Device MPS
-        Is the setting used to identify the device as an Apple Silicon Computer
+    - Device MPS signifies the setting used to identify the device as an Apple Silicon Computer
 
 
 #### How it identified cards 
