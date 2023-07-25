@@ -120,22 +120,14 @@ Inspired by [youtube project](https://www.youtube.com/watch?v=WgPbbWmnXJ8&t=75s)
 
 3. I used an `Apple M1 Pro Laptop` for training using these [settings](https://github.com/LukaFlores/object-tracking-opencv/blob/2e872723a19a7ae71c05505a22aae430abf5951c/Yolo-Poker/train.py#L21-L28)
 
-<li>
-  <a>Epochs</a>
-  <ul>
+    - Epochs
         Epochs are the number of times that it is trained
-  </ul>
-</li>
-<li>
-  <a>Batch</a>
-  <ul>
-    <img src="Car-Counter/Video/readme-img.png" alt="Logo" width="500" />
-  </ul>
-  <a>Device MPS</a>
-  <ul>
-    Is the setting used to identify the device as an Apple Silicon Computer
-  </ul>
-</li>
+
+    - Batch
+
+    - Device MPS
+        Is the setting used to identify the device as an Apple Silicon Computer
+
 
 #### How it identified cards 
 
