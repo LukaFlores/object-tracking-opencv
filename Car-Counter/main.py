@@ -131,8 +131,8 @@ while True:
         cvzone.putTextRect(img, f'North Count: {len(totalCountNorth)}', (850, 50))
 
     # Open Window
-    cv2.imshow("Image", img)
-    # cv2.imshow("ImageRegion", imgRegion)
+    #cv2.imshow("Image", img)
+    cv2.imshow("ImageRegion", imgRegion)
 
     VideoResult.write(img)
 
