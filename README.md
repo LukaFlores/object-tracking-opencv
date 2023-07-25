@@ -30,10 +30,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a>
-    <video src="Car-Counter/Video/VideoResult.avi" alt="Logo" width="80" />
-  </a>
-
+  <video src="Car-Counter/Video/VideoResult.avi" alt="Logo" width="180" />
   <h3 align="center">Best-README-Template</h3>
 
   <p align="center">
