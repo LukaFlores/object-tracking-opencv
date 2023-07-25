@@ -4,7 +4,7 @@ import cvzone
 import math
 
 # Webcam
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 # Set Width
 cap.set(3, 1280)
 # Set Height

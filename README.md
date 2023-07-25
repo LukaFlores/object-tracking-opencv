@@ -61,7 +61,7 @@ git clone https://github.com/LukaFlores/object-tracking-opencv.git
 cd Car-Counter
 ```
 
-3. On another machine connected to the same network, start the streamer, and enter the IP of the machine running the StreamViewer.
+3. Run the Program
 ```
 ./build.sh
 ```
@@ -75,12 +75,13 @@ The goal of the car counter is to track the number of cars that pass north and s
 
 #### How it was done
 
-1. A mask was overlaid on the video to the area in which the vehicles could be identified. A bitwise * and * function was used to find the shared space of the mask and the video frame ![Code](https://github.com/LukaFlores/object-tracking-opencv/blob/05fad2bb24db0296b3b97c996344c7752614ea34/Car-Counter/main.py#L52C1-L53)
+1. A mask was overlaid on the video to the area in which the vehicles could be identified. A bitwise * and * function was used to find the shared space of the mask and the video frame [Code](https://github.com/LukaFlores/object-tracking-opencv/blob/05fad2bb24db0296b3b97c996344c7752614ea34/Car-Counter/main.py#L52C1-L53)
 
 <div align="center">
     <img src="Car-Counter/Video/readme-mask.png" alt="Logo" width="500" />
 </div>
 
+2. The current frame  
 
 
 
