@@ -90,6 +90,9 @@ Which as a results tracks a specific object across multiple frames.
 4. Finally to keep counter an [origin](https://github.com/LukaFlores/object-tracking-opencv/blob/05fad2bb24db0296b3b97c996344c7752614ea34/Car-Counter/main.py#L114-L116) is placed at the center of each object, once it crosses the respective [line](https://github.com/LukaFlores/object-tracking-opencv/blob/05fad2bb24db0296b3b97c996344c7752614ea34/Car-Counter/main.py#L99-L100) it is added to the overall tally.
 
 
+
+![Result](https://github.com/LukaFlores/object-tracking-opencv/assets/85141937/a6d8c7fd-ba35-4f63-bb3c-29cc9249967f)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
