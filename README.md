@@ -114,25 +114,36 @@ Inspired by [youtube project](https://www.youtube.com/watch?v=WgPbbWmnXJ8&t=75s)
 
 #### How it was trained
 
+1. [Dataset](https://universe.roboflow.com/augmented-startups/playing-cards-ow27d/dataset/3) was taken from roboflow 
+
+2. The model is trained with [ultralytics Yolo](https://github.com/ultralytics/ultralytics) using these [labels](https://github.com/LukaFlores/object-tracking-opencv/blob/2e872723a19a7ae71c05505a22aae430abf5951c/Yolo-Poker/data.yaml#L7). 
+
+3. I used an `Apple M1 Pro Laptop` for training using these [settings](https://github.com/LukaFlores/object-tracking-opencv/blob/2e872723a19a7ae71c05505a22aae430abf5951c/Yolo-Poker/train.py#L21-L28)
+
+<li>
+  <a>Epochs</a>
+  <ul>
+        Epochs are the number of times that it is trained
+  </ul>
+</li>
+<li>
+  <a>Batch</a>
+  <ul>
+    <img src="Car-Counter/Video/readme-img.png" alt="Logo" width="500" />
+  </ul>
+  <a>Device MPS</a>
+  <ul>
+    Is the setting used to identify the device as an Apple Silicon Computer
+  </ul>
+</li>
+
 #### How it identified cards 
 
 1. It identified card using the model it was trained on, in which it surrounds the card number with a bounding box
 
 #### How it identified hands 
 
-1. The hand is then passed to `pokerhand`
-
-<div align="center">
-    <img src="Car-Counter/Video/readme-mask.png" alt="Logo" width="500" />
-</div>
-
-2. The current frame (with the mask) is then assessed by the [Yolo Model](https://docs.ultralytics.com), which tries to identify one of the labels in this [list](https://github.com/LukaFlores/object-tracking-opencv/blob/05fad2bb24db0296b3b97c996344c7752614ea34/Car-Counter/main.py#L13C1-L30C2), after detection it will produce a [list](https://github.com/LukaFlores/object-tracking-opencv/blob/05fad2bb24db0296b3b97c996344c7752614ea34/Car-Counter/main.py#L55) 
-of boxes bounding the object. We are left with the image recognition of vehicles after [filtering](https://github.com/LukaFlores/object-tracking-opencv/blob/05fad2bb24db0296b3b97c996344c7752614ea34/Car-Counter/main.py#L81-L84) for objects and confidence.
-
-3. [Abewley's realtime tracking algorithm](https://github.com/abewley/sort) assesses the age in which the object is not seen throughout frames ([max_age](https://github.com/LukaFlores/object-tracking-opencv/blob/05fad2bb24db0296b3b97c996344c7752614ea34/Car-Counter/main.py#L36)), the is the minimum value of hit streak to continue tracking ([min_hits](https://github.com/LukaFlores/object-tracking-opencv/blob/05fad2bb24db0296b3b97c996344c7752614ea34/Car-Counter/main.py#L36)) and the common characteristics of a specific object across frames ([iou_threshold](https://github.com/LukaFlores/object-tracking-opencv/blob/05fad2bb24db0296b3b97c996344c7752614ea34/Car-Counter/main.py#L36))
-Which as a results tracks a specific object across multiple frames.
-
-4. Finally, to keep counter an [origin](https://github.com/LukaFlores/object-tracking-opencv/blob/05fad2bb24db0296b3b97c996344c7752614ea34/Car-Counter/main.py#L114-L116) is placed at the center of each object, once it crosses the respective [line](https://github.com/LukaFlores/object-tracking-opencv/blob/05fad2bb24db0296b3b97c996344c7752614ea34/Car-Counter/main.py#L99-L100) it is added to the overall tally.
+1. The hand is then passed to [`findPokerHand`](https://github.com/LukaFlores/object-tracking-opencv/blob/2e872723a19a7ae71c05505a22aae430abf5951c/Yolo-Poker/pokerHandFunction.py#L7-L110) where it deduces the hand base on a series of conditions
 
 ### Poker Hand Result
 
