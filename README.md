@@ -90,7 +90,7 @@ of boxes bounding the object. We are left with the image recognition of vehicles
 3. [Abewley's realtime tracking algorithm](https://github.com/abewley/sort) assesses the age in which the object is not seen throughout frames ([max_age](https://github.com/LukaFlores/object-tracking-opencv/blob/05fad2bb24db0296b3b97c996344c7752614ea34/Car-Counter/main.py#L36)), the is the minimum value of hit streak to continue tracking ([min_hits](https://github.com/LukaFlores/object-tracking-opencv/blob/05fad2bb24db0296b3b97c996344c7752614ea34/Car-Counter/main.py#L36)) and the common characteristics of a specific object across frames ([iou_threshold](https://github.com/LukaFlores/object-tracking-opencv/blob/05fad2bb24db0296b3b97c996344c7752614ea34/Car-Counter/main.py#L36))
 Which as a results tracks a specific object across multiple frames.
 
-4. Finally to keep counter an [origin](https://github.com/LukaFlores/object-tracking-opencv/blob/05fad2bb24db0296b3b97c996344c7752614ea34/Car-Counter/main.py#L114-L116) is placed at the center of each object, once it crosses the respective [line](https://github.com/LukaFlores/object-tracking-opencv/blob/05fad2bb24db0296b3b97c996344c7752614ea34/Car-Counter/main.py#L99-L100) it is added to the overall tally.
+4. Finally, to keep counter an [origin](https://github.com/LukaFlores/object-tracking-opencv/blob/05fad2bb24db0296b3b97c996344c7752614ea34/Car-Counter/main.py#L114-L116) is placed at the center of each object, once it crosses the respective [line](https://github.com/LukaFlores/object-tracking-opencv/blob/05fad2bb24db0296b3b97c996344c7752614ea34/Car-Counter/main.py#L99-L100) it is added to the overall tally.
 
 ### Car Counter Result
 
