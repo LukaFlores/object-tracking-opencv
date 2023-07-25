@@ -6,6 +6,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
+    <h1> Object Tracking Open Cv</h1>
   <p align="center">
     A set of projects to learn about Computer Vision
     <br />
@@ -71,7 +72,7 @@ cd Car-Counter
 <!-- Car Counter -->
 ## Car Counter
 
-The goal of the car counter is to track the number of cars that pass north and south on the freeway
+Inspired by [youtube project](https://www.youtube.com/watch?v=WgPbbWmnXJ8&t=75s) in which goal of the car counter is to track the number of cars that pass north and south on the freeway
 
 #### How it was done
 
@@ -97,5 +98,3 @@ Which as a results tracks a specific object across multiple frames.
 
 
 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
