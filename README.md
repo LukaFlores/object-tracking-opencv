@@ -24,7 +24,7 @@
       </ul>
     </li>
     <li>
-      <a href="#Car-Counter">Car Counter</a>
+      <a href="#car-counter">Car Counter</a>
       <ul>
         <img src="Car-Counter/Video/readme-img.png" alt="Logo" width="500" />
       </ul>
