@@ -31,7 +31,7 @@
 <br />
 <div align="center">
   <a>
-    <img src="./Car-Counter/Video/VideoResult.avi" alt="Logo" width="80" height="80">
+    <video src="./Car-Counter/Video/VideoResult.avi" alt="Logo" width="180" >
   </a>
 
   <h3 align="center">Best-README-Template</h3>
