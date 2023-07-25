@@ -123,7 +123,7 @@ Inspired by [youtube project](https://www.youtube.com/watch?v=WgPbbWmnXJ8&t=75s)
     - Epochs signify the number of times the model has been through the training data
 
     - Batch signifies the number of images used for one iteration, the image below is an example of what the model sees
-    ![batch image]()
+    ![batch image](https://github.com/LukaFlores/object-tracking-opencv/blob/master/Yolo-Poker/readme_batch.jpg)
 
     - Device MPS signifies the setting used to identify the device as an Apple Silicon Computer
 
