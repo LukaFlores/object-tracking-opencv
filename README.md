@@ -32,6 +32,14 @@
           </a>
       </ul>
     </li>
+    <li>
+      <a href="#poker-hand">Poker Hand</a>
+      <ul>
+          <a href="#poker-hand-result">
+            <img src="Car-Counter/Video/readme-img.png" alt="Logo" width="500" />
+          </a>
+      </ul>
+    </li>
   </ol>
 </details>
 
@@ -97,6 +105,42 @@ Which as a results tracks a specific object across multiple frames.
 ![Result](https://github.com/LukaFlores/object-tracking-opencv/assets/85141937/a6d8c7fd-ba35-4f63-bb3c-29cc9249967f)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- Poker Hand -->
+## Poker Hand 
+
+Inspired by [youtube project](https://www.youtube.com/watch?v=WgPbbWmnXJ8&t=75s) in which goal is to identify a 5 card poker hand
+
+#### How it was trained
+
+#### How it identified cards 
+
+1. It identified card using the model it was trained on, in which it surrounds the card number with a bounding box
+
+#### How it identified hands 
+
+1. The hand is then passed to `pokerhand`
+
+<div align="center">
+    <img src="Car-Counter/Video/readme-mask.png" alt="Logo" width="500" />
+</div>
+
+2. The current frame (with the mask) is then assessed by the [Yolo Model](https://docs.ultralytics.com), which tries to identify one of the labels in this [list](https://github.com/LukaFlores/object-tracking-opencv/blob/05fad2bb24db0296b3b97c996344c7752614ea34/Car-Counter/main.py#L13C1-L30C2), after detection it will produce a [list](https://github.com/LukaFlores/object-tracking-opencv/blob/05fad2bb24db0296b3b97c996344c7752614ea34/Car-Counter/main.py#L55) 
+of boxes bounding the object. We are left with the image recognition of vehicles after [filtering](https://github.com/LukaFlores/object-tracking-opencv/blob/05fad2bb24db0296b3b97c996344c7752614ea34/Car-Counter/main.py#L81-L84) for objects and confidence.
+
+3. [Abewley's realtime tracking algorithm](https://github.com/abewley/sort) assesses the age in which the object is not seen throughout frames ([max_age](https://github.com/LukaFlores/object-tracking-opencv/blob/05fad2bb24db0296b3b97c996344c7752614ea34/Car-Counter/main.py#L36)), the is the minimum value of hit streak to continue tracking ([min_hits](https://github.com/LukaFlores/object-tracking-opencv/blob/05fad2bb24db0296b3b97c996344c7752614ea34/Car-Counter/main.py#L36)) and the common characteristics of a specific object across frames ([iou_threshold](https://github.com/LukaFlores/object-tracking-opencv/blob/05fad2bb24db0296b3b97c996344c7752614ea34/Car-Counter/main.py#L36))
+Which as a results tracks a specific object across multiple frames.
+
+4. Finally, to keep counter an [origin](https://github.com/LukaFlores/object-tracking-opencv/blob/05fad2bb24db0296b3b97c996344c7752614ea34/Car-Counter/main.py#L114-L116) is placed at the center of each object, once it crosses the respective [line](https://github.com/LukaFlores/object-tracking-opencv/blob/05fad2bb24db0296b3b97c996344c7752614ea34/Car-Counter/main.py#L99-L100) it is added to the overall tally.
+
+### Poker Hand Result
+
+![Result](https://github.com/LukaFlores/object-tracking-opencv/assets/85141937/a6d8c7fd-ba35-4f63-bb3c-29cc9249967f)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 
 
 

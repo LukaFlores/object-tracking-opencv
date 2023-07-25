@@ -42,8 +42,8 @@ limitsNorth = [700, 200, 1100, 200]
 totalCountSouth = []
 totalCountNorth = []
 
-
-VideoResult = cv2.VideoWriter('./Video/VideoResult.avi', cv2.VideoWriter_fourcc(*'MJPG'), 10, (1280, 720))
+# For saving Video
+# VideoResult = cv2.VideoWriter('./Video/VideoResult.avi', cv2.VideoWriter_fourcc(*'MJPG'), 10, (1280, 720))
 
 
 while True:
@@ -134,12 +134,15 @@ while True:
     cv2.imshow("Image", img)
     #cv2.imshow("ImageRegion", imgRegion)
 
-    VideoResult.write(img)
+    # For saving video
+    #VideoResult.write(img)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
 
-VideoResult.release()
+# For saving video
+# VideoResult.release()
+
 cv2.destroyAllWindows()
 print("The video was successfully saved")
