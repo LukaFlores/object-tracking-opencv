@@ -11,7 +11,7 @@ cap.set(3, 1280)
 # Set Height
 cap.set(4, 720)
 
-model = YOLO("./datasets/runs/detect/yolov8n_poker91/weights/best.pt")
+model = YOLO("./playingCards.pt")
 
 # Label Array
 classNames = ['10C', '10D', '10H', '10S',
