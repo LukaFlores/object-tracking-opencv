@@ -69,7 +69,7 @@ while True:
                 img, f'{classNames[cls]} - {confidence}',
                 (max(0, x1), max(35, y1)), scale=1, thickness=1)
 
-            if confidence > 0.6:
+            if confidence > 0.8:
                 hand.append(classNames[cls])
 
     hand = list(set(hand))
